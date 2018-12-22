@@ -11,10 +11,11 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: 'post',
-        path: `${__dirname}/blog`,
+        spaceId: `8j8bi3um25d9`,
+        // Learn about environment variables: https://gatsby.app/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
